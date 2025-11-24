@@ -22,6 +22,7 @@ function App() {
             <Searchbar onSearchChange={setSearchTerm}></Searchbar>
             <AllTheBooks
               onSelectBook={setSelectedBook}
+              selectedBook={selectedBook}
               books={Books}
               searchTerm={searchTerm}></AllTheBooks>
           </Col>
