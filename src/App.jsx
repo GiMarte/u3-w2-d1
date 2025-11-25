@@ -19,7 +19,9 @@ function App() {
       <Container fluid>
         <Row className="position-relative">
           <Col className="d-none d-md-block">
-            <Searchbar onSearchChange={setSearchTerm}></Searchbar>
+            <Searchbar
+              onSearchChange={setSearchTerm}
+              searchedTerm={searchTerm}></Searchbar>
             <AllTheBooks
               onSelectBook={setSelectedBook}
               selectedBook={selectedBook}
@@ -38,7 +40,9 @@ function App() {
             {selectedBook && <SingleBook book={selectedBook} />}
           </Col>
           <Col className="d-block d-md-none">
-            <Searchbar onSearchChange={setSearchTerm}></Searchbar>
+            <Searchbar
+              onSearchChange={setSearchTerm}
+              searchedTerm={searchTerm}></Searchbar>
             <AllTheBooks
               onSelectBook={setSelectedBook}
               books={Books}
